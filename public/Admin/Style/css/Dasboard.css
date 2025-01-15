@@ -1,0 +1,160 @@
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: auto;
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.Dashboard-container {
+    flex: 1 1 calc(50% - 20px); /* Two columns with a gap */
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: -1px 1px 22px 4px rgba(23, 24, 23, 0.20);
+    -webkit-box-shadow: -1px 1px 22px 4px rgba(27, 29, 28, 0.20);
+    -moz-box-shadow: -1px 1px 22px 4px rgba(8, 240, 97, 0.20);
+    box-sizing: border-box;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+}
+
+.Dashboard-container img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    width: 454px; /* Set a specific width for the image */
+    border-radius: 8px; /* Optional: to make the image corners rounded */
+    margin-top: 0; /* Ensure no margin above */
+    margin-bottom: 20px; /* Optional: space below the image */
+}
+
+.Dashboard-container h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: black; /* Warna default saat mode terang */
+}
+
+body.dark .Dashboard-container h2 {
+    color: var(--light-success); /* Warna dari variabel saat mode gelap */
+}
+
+
+.wrapper {
+    width: 30%;
+    display: flex;
+    justify-content: center; /* Center align content horizontally */
+}
+
+.password-box {
+    position: relative;
+    width: 70%; /* Set width to 70% */
+}
+
+.password-box input {
+    width: 100%; /* Set width to 100% of the password-box */
+    padding: 10px 45px 10px 15px; /* Adjust padding to make room for the icon */
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: transparent;
+}
+
+body.dark  .password-box input {
+    width: 100%; /* Set width to 100% of the password-box */
+    padding: 10px 45px 10px 15px; /* Adjust padding to make room for the icon */
+    border-radius: 8px;
+    border: 1px solid rgb(3, 255, 79);
+    background-color: transparent;
+    color: rgb(3, 255, 79) ;
+}
+
+.copy-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Position icon inside the input box */
+    transform: translateY(-50%);
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body.dark  .copy-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Position icon inside the input box */
+    transform: translateY(-50%);
+    color: rgb(3, 255, 79);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.copy-icon:hover {
+    color: orange;
+}
+
+.generate-button {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 12px 0;
+    margin-top: 20px;
+    background: orange;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.generate-button:hover {
+    background-color: rgb(255, 102, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .chart-container {
+        flex: 1 1 100%;
+    }
+    .Dashboard-container img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+        width: 300px; /* Set a specific width for the image */
+        border-radius: 8px; /* Optional: to make the image corners rounded */
+        margin-top: 0; /* Ensure no margin above */
+        margin-bottom: 20px; /* Optional: space below the image */
+    }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center align content horizontally */
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .chart-container {
+        flex: 1 1 100%;
+    }
+
+    .Dashboard-container h2 {
+        font-size: 10px;
+    }
+    .Dashboard-container img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+        width: 300px; /* Set a specific width for the image */
+        border-radius: 8px; /* Optional: to make the image corners rounded */
+        margin-top: 0; /* Ensure no margin above */
+        margin-bottom: 20px; /* Optional: space below the image */
+    }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center align content horizontally */
+    }
+
+}

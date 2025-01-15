@@ -1,0 +1,42 @@
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: auto;
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box;
+    /* border: 10px solid black; */
+    justify-content: space-between;
+}
+
+.chart-container {
+    flex: 1 1 calc(50% - 20px); /* Two columns with a gap */
+    min-width: 200px; /* Ensures the container doesn't get too small */
+    height: 300px;
+    background-color:var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+}
+body.dark .chart-container  {
+    background-color:#292f31;
+    }
+    
+
+@media screen and (max-width: 768px) {
+    .chart-container {
+        /* margin-left: -35px; */
+        flex: 1 1 100%; /* Full width for each chart */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .chart-container {
+        /* margin-left: -35px; */
+        flex: 1 1 100%; /* Full width for each chart */
+    }
+}

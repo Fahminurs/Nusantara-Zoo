@@ -1,0 +1,318 @@
+
+
+@media print {
+ .table, .table__body {
+  overflow: visible;
+  height: auto !important;
+  width: auto !important;
+ }
+}
+
+/*@page {
+    size: landscape;
+    margin: 0; 
+}*/
+
+
+
+main.table {
+
+margin: 0;
+    padding:4px;
+    margin-left:-3px;
+
+
+    overflow: hidden;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+.input-group input{
+    flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    background: var(--grey);
+    border-radius: 36px 0 0 36px;
+    outline: none;
+    width: 100%;
+    color: var(--dark);
+    /* border: 1px solid black; */
+}
+.input-group button{
+    width: 80px;
+    
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(54,57,73);
+    color: var(--light);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 0 36px 36px 0;
+    cursor: pointer;
+}
+
+
+/* .table__header .input-group {
+    width: 10%;
+    height: 100%;
+    background-color:transparent;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: end;
+    align-items: end   ;
+  
+
+    transition:  .2s;
+
+}
+
+.table__header .input-group:hover {
+    width: 70%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+} 
+
+ .table__header .input-group img {
+    width: 1.2rem;
+    height: 1.2rem;
+} 
+
+ .table__header .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+} */
+
+.table__body {
+    width: 100%;
+    max-height: calc(89% - 1.6rem);
+
+    margin: .8rem auto;
+    border-radius: .6rem;
+
+    overflow: auto;
+    overflow: overlay;
+    /* border: 1px solid black;  */
+}
+
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+
+}
+
+/* .table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+} */
+
+
+table {
+    width: 100%;
+    
+}
+
+td img {
+    width: 36px;
+    height: 36px;
+    margin-right: .5rem;
+    border-radius: 50%;
+
+    vertical-align: middle;
+    
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    /* border: 1px solid black;  */
+    text-align: left;
+    color: var(--dark);
+}
+body.dark th {
+    color: black;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--light-utama);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+
+.status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: left;
+}
+
+.status.delivered {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.shipped {
+    background-color: #6fcaea;
+}
+
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
+
+thead th span.icon-arrow {
+    display: inline;
+    /* width: 1.3rem;
+    height: 1.3rem; */
+    border-radius: 50%;
+    border: 1.4px solid transparent;
+    
+    text-align: center;
+    font-size: 1rem;
+    
+    margin-left: .5rem;
+    transition: .2s ease-in-out;
+}
+
+thead th:hover span.icon-arrow{
+    border: 1.4px solid #6c00bd;
+}
+
+thead th:hover {
+    color: #6c00bd;
+}
+
+thead th.active span.icon-arrow{
+    background-color: #6c00bd;
+    color: #fff;
+}
+
+thead th.asc span.icon-arrow{
+    transform: rotate(180deg);
+}
+
+thead th.active,tbody td.active {
+    color: #6c00bd;
+}
+
+
+.wrapper-slider .range-box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden; /* Tambahkan overflow: hidden; untuk memastikan kontainer tidak memperlihatkan bagian dari isi yang melebihi batas kontainer */
+}
+
+.range-box input[type="range"] {
+    width: calc(100% - 80px); /* Menggunakan calc() untuk mengurangi lebar input number dari lebar total */
+    height: 2px;
+    accent-color: var(--utama);
+    cursor: pointer;
+    margin: 0 10px; /* Tambahkan margin agar slider tidak menempel pada tepi */
+    padding-left: 0px;
+    padding-right: 1px;
+}
+
+.range-box .slider-number {
+    width: 80px; /* Tetapkan lebar input number agar tetap konsisten */
+    text-align: right;
+    font-size: 17px;
+    /* color: white; */
+    border: 10px solid black;
+    margin-left: 10px; /* Tambahkan margin kiri untuk memberi jarak dari slider */
+    
+}
+
+
+
+.wrapper-slider  {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    margin-bottom:30px;
+}
+
+.wrapper-slider  .range-box {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Atur lebar slider sesuai kebutuhan */
+    
+    overflow: hidden; /* Pastikan kontainer tidak memperlihatkan bagian dari isi yang melebihi batas kontainer */
+}
+
+.wrapper-slider  .range-box input[type="range"] {
+    width: 100%; /* Penuh lebar */
+}
+
+
+
+
